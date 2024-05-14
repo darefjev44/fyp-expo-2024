@@ -8,27 +8,48 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Machine Learning in FPS Games</title>
-    <meta name="description" content="Exploring Machine Learning in First Person Shooter games." />
+    <meta
+      name="description"
+      content="Exploring Machine Learning in First Person Shooter games."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="dist/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
   </head>
   <body class="m-0 bg-gray-100 text-gray-900">
-    <header class="relative flex items-center justify-center h-screen mb-12 overflow-hidden">
+    <header
+      class="relative flex items-center justify-center h-screen mb-12 overflow-hidden"
+    >
       <!-- Call to Action -->
-      <div class="absolute top-0 left-0 right-0 flex items-center justify-center h-full z-20">
+      <div
+        class="absolute top-0 left-0 right-0 flex items-center justify-center h-full z-20"
+      >
         <div class="text-center text-white p-4 text-shadow">
-          <h1 class="text-4xl md:text-6xl font-bold mb-4">Machine Learning in First Person Shooter (FPS) Games</h1>
+          <h1 class="text-4xl md:text-6xl font-bold mb-4">
+            Machine Learning in First Person Shooter (FPS) Games
+          </h1>
           <p class="text-lg md:text-xl mb-8">
             Explore how machine learning can revolutionize the AI in FPS games,
             providing more immersive and challenging experiences.
           </p>
-          <a href="#page-content"class="bg-transparent hover:bg-blue-600 font-semibold hover:text-white py-2 px-4 border border-blue-600 hover:border-transparent rounded">
+          <a
+            href="#page-content"
+            class="bg-transparent hover:bg-blue-600 font-semibold hover:text-white py-2 px-4 border border-blue-600 hover:border-transparent rounded"
+          >
             Explore Project
           </a>
         </div>
       </div>
       <!-- Background Video -->
-      <video autoplay loop muted class="absolute z-10 w-auto min-w-full min-h-full max-w-none blur-video">
+      <video
+        autoplay
+        loop
+        muted
+        class="absolute z-10 w-auto min-w-full min-h-full max-w-none blur-video"
+      >
         <source src="videos/bg_video_compressed.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
@@ -37,7 +58,9 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <!-- Introduction Section -->
         <section id="introduction">
-          <h2 class="text-3xl font-semibold mb-4 text-blue-600">Introduction</h2>
+          <h2 class="text-3xl font-semibold mb-4 text-blue-600">
+            Introduction
+          </h2>
           <p class="text-lg leading-relaxed">
             Machine Learning research in First-Person Shooter (FPS) games has
             primarily been limited to platforms like VizDoom and DeepMind Lab,
@@ -54,9 +77,9 @@
             A custom FPS game environment was developed using the Unity game
             engine, providing a dynamic setting for training and testing AI
             agents through Unity ML-Agents. The AI agents were trained using a
-            curriculum learning approach to gradually increase the complexity
-            of the training environment, as well as self-play to allow
-            the agents to learn from their own past experiences.
+            curriculum learning approach to gradually increase the complexity of
+            the training environment, as well as self-play to allow the agents
+            to learn from their own past experiences.
           </p>
         </section>
       </div>
@@ -70,7 +93,7 @@
               used self-play, including one initiated from the
               highest-performing target-based model. One agent was selected for
               integration into a playable version of the game. This agent was
-              tested across 324 rounds against human players of varying skill
+              tested across 334 rounds against human players of varying skill
               levels.
             </p>
             <p class="text-lg leading-relaxed">
@@ -83,199 +106,765 @@
           <div>
             <div class="mb-4">
               <div class="flex flex-wrap border-b border-gray-300">
-                <button class="tab-button flex-1 px-2 py-1 md:px-4 md:py-2 text-sm md:text-lg font-medium text-gray-700 border-b-2 border-transparent hover:border-blue-500 focus:outline-none" onclick="openTab(event, 'model-comparison')">
+                <button
+                  class="tab-button flex-1 px-2 py-1 md:px-4 md:py-2 text-sm md:text-lg font-medium text-gray-700 border-b-2 border-transparent hover:border-blue-500 focus:outline-none"
+                  onclick="openTab(event, 'model-comparison')"
+                >
                   Model Comparison
                 </button>
-                <button class="tab-button flex-1 px-2 py-1 md:px-4 md:py-2 text-sm md:text-lg font-medium text-gray-700 border-b-2 border-transparent hover:border-blue-500 focus:outline-none border-blue-600" onclick="openTab(event, 'agent-vs-humans')">
+                <button
+                  class="tab-button flex-1 px-2 py-1 md:px-4 md:py-2 text-sm md:text-lg font-medium text-gray-700 border-b-2 focus:outline-none border-blue-600"
+                  onclick="openTab(event, 'agent-vs-humans')"
+                >
                   Agent vs. Humans
                 </button>
-                <button class="tab-button flex-1 px-2 py-1 md:px-4 md:py-2 text-sm md:text-lg font-medium text-gray-700 border-b-2 border-transparent hover:border-blue-500 focus:outline-none" onclick="openTab(event, 'target-training')">
+                <button
+                  class="tab-button flex-1 px-2 py-1 md:px-4 md:py-2 text-sm md:text-lg font-medium text-gray-700 border-b-2 border-transparent hover:border-blue-500 focus:outline-none"
+                  onclick="openTab(event, 'target-training')"
+                >
                   Target Training
                 </button>
-                <button class="tab-button flex-1 px-2 py-1 md:px-4 md:py-2 text-sm md:text-lg font-medium text-gray-700 border-b-2 border-transparent hover:border-blue-500 focus:outline-none" onclick="openTab(event, 'self-play-training')">
+                <button
+                  class="tab-button flex-1 px-2 py-1 md:px-4 md:py-2 text-sm md:text-lg font-medium text-gray-700 border-b-2 border-transparent hover:border-blue-500 focus:outline-none"
+                  onclick="openTab(event, 'self-play-training')"
+                >
                   Self-Play Training
                 </button>
-              </div>              
+              </div>
             </div>
-            <div id="model-comparison" class="tab-content p-4 overflow-auto hidden">
-              <table class="bg-white border border-gray-300 table-auto">
-                <thead class="bg-gray-200">
-                  <tr>
-                    <th class="px-2 py-1 border border-gray-300 text-left">Run ID</th>
-                    <th class="px-2 py-1 border border-gray-300 text-right">First Success Step</th>
-                    <th class="px-2 py-1 border border-gray-300 text-right">First Success Episode Length</th>
-                    <th class="px-2 py-1 border border-gray-300 text-right">First Success ELO</th>
-                    <th class="px-2 py-1 border border-gray-300 text-right">Final Episode Length</th>
-                    <th class="px-2 py-1 border border-gray-300 text-right">Final ELO</th>
-                    <th class="px-2 py-1 border border-gray-300 text-right">Final Cumulative Reward</th>
-                    <th class="px-2 py-1 border border-gray-300 text-right">Time Elapsed (hh:mm:ss)</th>
-                    <th class="px-2 py-1 border border-gray-300 text-right">Time Elapsed (steps)</th>
-                  </tr>
-                </thead>
-                <tbody class="text-nowrap">
-                  <tr>
-                    <td class="px-2 py-1 border border-gray-300 text-left italic font-bold">target-based/</td>
-                  </tr>
-                  <tr>
-                    <td class="px-2 py-1 border border-gray-300 text-left italic">curriculum</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">9125000</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">677.41</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">N/A</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">501.58</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">N/A</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">4.51</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">6:09:25</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">30000000</td>
-                  </tr>
-                  <tr>
-                    <td class="px-2 py-1 border border-gray-300 text-left italic">curriculum-curiosity</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">12475000</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">644.45</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">N/A</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">394.57</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">N/A</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">4.02</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">8:07:10</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">30000000</td>
-                  </tr>
-                  <tr>
-                    <td class="px-2 py-1 border border-gray-300 text-left italic">rand</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">18575000</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">640.57</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">N/A</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">558.50</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">N/A</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">4.64</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">6:10:47</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">30000000</td>
-                  </tr>
-                  <tr>
-                    <td class="px-2 py-1 border border-gray-300 text-left italic">rand-curiosity</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">19025000</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">807.07</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">N/A</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">680.05</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">N/A</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">4.65</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">8:09:41</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">30000000</td>
-                  </tr>
-                  <tr>
-                    <td class="px-2 py-1 border border-gray-300 text-left italic font-bold">self-play/</td>
-                  </tr>
-                  <tr>
-                    <td class="px-2 py-1 border border-gray-300 text-left italic">poca-curriculum</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">N/A</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">N/A</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">N/A</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">124.05</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">1629.55</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">3.75</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">15:16:56</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">50000000</td>
-                  </tr>
-                  <tr>
-                    <td class="px-2 py-1 border border-gray-300 text-left italic">poca-rand</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">N/A</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">N/A</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">N/A</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">250.81</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">1165.31</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">4.12</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">15:35:15</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">50000000</td>
-                  </tr>
-                  <tr>
-                    <td class="px-2 py-1 border border-gray-300 text-left italic font-bold">self-play-from-model/</td>
-                  </tr>
-                  <tr>
-                    <td class="px-2 py-1 border border-gray-300 text-left italic">poca-curriculum</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">21625000</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">224.32</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">1350.03</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">266.36</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">1485.64</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">4.18</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">15:18:21</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">50000000</td>
-                  </tr>
-                </tbody>
-              </table>
-              
+            <div
+              id="model-comparison"
+              class="tab-content p-4 overflow-auto hidden"
+            >
+              <h3 class="text-xl font-semibold mb-2">Agent Configurations</h3>
+              <p class="text-lg">
+                Agents trained with curriculum or the curiosity module enabled
+                have the tags 'curriculum' and/or 'curiosity' in their model ID
+                names, respectively. See below table for details on the
+                curriculum lessons used to control the difficulty of the
+                environment at various stages throughout training.
+              </p>
+              <div class="my-4">
+                <button
+                  class="toggleTablesBtn italic"
+                  data-target="config-table"
+                >
+                  <span>Toggle curriculum details...</span>
+                  <i
+                    class="fas fa-caret-down ml-2 transition-transform duration-500"
+                  ></i>
+                </button>
+              </div>
+              <div
+                id="config-table"
+                class="overflow-hidden max-h-0 transition-all duration-500 mb-12"
+              >
+                <table
+                  class="min-w-full bg-white border border-gray-300 table-auto"
+                >
+                  <thead class="bg-gray-200">
+                    <tr>
+                      <th class="px-4 py-2 border border-gray-300 text-left">
+                        Lesson
+                      </th>
+                      <th class="px-4 py-2 border border-gray-300 text-right">
+                        Progress Threshold (Steps/Maxstep)
+                      </th>
+                      <th class="px-4 py-2 border border-gray-300 text-right">
+                        Difficulty Range
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="text-nowrap">
+                    <tr>
+                      <td class="px-4 py-2 border border-gray-300 text-left">
+                        No Curriculum
+                      </td>
+                      <td class="px-4 py-2 border border-gray-300 text-right">
+                        n/a
+                      </td>
+                      <td class="px-4 py-2 border border-gray-300 text-right">
+                        0.3 - 0.8
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-4 py-2 border border-gray-300 text-left">
+                        0
+                      </td>
+                      <td class="px-4 py-2 border border-gray-300 text-right">
+                        0.05
+                      </td>
+                      <td class="px-4 py-2 border border-gray-300 text-right">
+                        0.3
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-4 py-2 border border-gray-300 text-left">
+                        1
+                      </td>
+                      <td class="px-4 py-2 border border-gray-300 text-right">
+                        0.10
+                      </td>
+                      <td class="px-4 py-2 border border-gray-300 text-right">
+                        0.3 - 0.4
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-4 py-2 border border-gray-300 text-left">
+                        2
+                      </td>
+                      <td class="px-4 py-2 border border-gray-300 text-right">
+                        0.15
+                      </td>
+                      <td class="px-4 py-2 border border-gray-300 text-right">
+                        0.3 - 0.5
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-4 py-2 border border-gray-300 text-left">
+                        3
+                      </td>
+                      <td class="px-4 py-2 border border-gray-300 text-right">
+                        0.20
+                      </td>
+                      <td class="px-4 py-2 border border-gray-300 text-right">
+                        0.3 - 0.6
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-4 py-2 border border-gray-300 text-left">
+                        4
+                      </td>
+                      <td class="px-4 py-2 border border-gray-300 text-right">
+                        0.25
+                      </td>
+                      <td class="px-4 py-2 border border-gray-300 text-right">
+                        0.3 - 0.7
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-4 py-2 border border-gray-300 text-left">
+                        5
+                      </td>
+                      <td class="px-4 py-2 border border-gray-300 text-right">
+                        n/a
+                      </td>
+                      <td class="px-4 py-2 border border-gray-300 text-right">
+                        0.3 - 0.8
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">
+                Successful Agent Results
+              </h3>
+              <p class="text-lg">
+                A successful agent is defined as achieving a mean cumulative
+                reward of at least 4.50 at the highest available difficulty
+                level for that training run. Outliers in data points are ignored
+                and a rolling mean is applied.
+              </p>
+              <p class="text-lg">
+                While neither of the
+                <span class="italic">self-play</span> agents were 'successful',
+                the ELO measure is much more indicative of performance during
+                self-play and details on ELO throughout training can be seen in
+                the Self-Play Training section.
+              </p>
+              <div class="my-4">
+                <button
+                  class="toggleTablesBtn italic"
+                  data-target="success-table"
+                >
+                  <span>Toggle success table...</span>
+                  <i
+                    class="fas fa-caret-down ml-2 transition-transform duration-500"
+                  ></i>
+                </button>
+              </div>
+              <div
+                id="success-table"
+                class="overflow-hidden max-h-0 transition-all duration-500 mb-12"
+              >
+                <table class="bg-white border border-gray-300 table-auto mb-6">
+                  <thead class="bg-gray-200">
+                    <tr>
+                      <th class="px-2 py-1 border border-gray-300 text-left">
+                        Run ID
+                      </th>
+                      <th class="px-2 py-1 border border-gray-300 text-right">
+                        First Success Step
+                      </th>
+                      <th class="px-2 py-1 border border-gray-300 text-right">
+                        First Success Episode Length
+                      </th>
+                      <th class="px-2 py-1 border border-gray-300 text-right">
+                        First Success ELO
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="text-nowrap">
+                    <tr>
+                      <td
+                        class="px-2 py-1 border border-gray-300 text-left italic font-bold"
+                        colspan="4"
+                      >
+                        target-based/
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="px-2 py-1 border border-gray-300 text-left italic"
+                      >
+                        curriculum
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        9125000
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        677.41
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        N/A
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="px-2 py-1 border border-gray-300 text-left italic"
+                      >
+                        curriculum-curiosity
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        12475000
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        644.45
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        N/A
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="px-2 py-1 border border-gray-300 text-left italic"
+                      >
+                        rand
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        18575000
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        640.57
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        N/A
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="px-2 py-1 border border-gray-300 text-left italic"
+                      >
+                        rand-curiosity
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        19025000
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        807.07
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        N/A
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="px-2 py-1 border border-gray-300 text-left italic font-bold"
+                        colspan="4"
+                      >
+                        self-play/
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="px-2 py-1 border border-gray-300 text-left italic"
+                      >
+                        poca-curriculum
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        N/A
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        N/A
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        N/A
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="px-2 py-1 border border-gray-300 text-left italic"
+                      >
+                        poca-rand
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        N/A
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        N/A
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        N/A
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="px-2 py-1 border border-gray-300 text-left italic font-bold"
+                        colspan="4"
+                      >
+                        self-play-from-model/
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="px-2 py-1 border border-gray-300 text-left italic"
+                      >
+                        poca-curriculum
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        21625000
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        224.32
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        1350.03
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Final Agent Results</h3>
+              <p class="text-lg">
+                The final results of all the training runs can be seen below.
+                The
+                <span class="italic">self-play-from-model/poca-curriculum</span>
+                model was initialized from the
+                <span class="italic">target-based/curriculum</span> model,
+                starting with a 30 million step advantage over other self-play
+                variants. Interestingly, it did not outperform either of the
+                self-play based models despite this advantage.
+              </p>
+              <div class="my-4">
+                <button
+                  class="toggleTablesBtn italic"
+                  data-target="results-table"
+                >
+                  <span>Toggle results table...</span>
+                  <i
+                    class="fas fa-caret-down ml-2 transition-transform duration-500"
+                  ></i>
+                </button>
+              </div>
+              <div
+                id="results-table"
+                class="overflow-hidden max-h-0 transition-all duration-500"
+              >
+                <table class="bg-white border border-gray-300 table-auto">
+                  <thead class="bg-gray-200">
+                    <tr>
+                      <th class="px-2 py-1 border border-gray-300 text-left">
+                        Run ID
+                      </th>
+                      <th class="px-2 py-1 border border-gray-300 text-right">
+                        Final Episode Length
+                      </th>
+                      <th class="px-2 py-1 border border-gray-300 text-right">
+                        Final ELO
+                      </th>
+                      <th class="px-2 py-1 border border-gray-300 text-right">
+                        Final Cumulative Reward
+                      </th>
+                      <th class="px-2 py-1 border border-gray-300 text-right">
+                        Time Elapsed (hh:mm:ss)
+                      </th>
+                      <th class="px-2 py-1 border border-gray-300 text-right">
+                        Time Elapsed (steps)
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="text-nowrap">
+                    <tr>
+                      <td
+                        class="px-2 py-1 border border-gray-300 text-left italic font-bold"
+                        colspan="6"
+                      >
+                        target-based/
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="px-2 py-1 border border-gray-300 text-left italic"
+                      >
+                        curriculum
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        501.58
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        N/A
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        4.51
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        6:09:25
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        30000000
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="px-2 py-1 border border-gray-300 text-left italic"
+                      >
+                        curriculum-curiosity
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        394.57
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        N/A
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        4.02
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        8:07:10
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        30000000
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="px-2 py-1 border border-gray-300 text-left italic"
+                      >
+                        rand
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        558.50
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        N/A
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        4.64
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        6:10:47
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        30000000
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="px-2 py-1 border border-gray-300 text-left italic"
+                      >
+                        rand-curiosity
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        680.05
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        N/A
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        4.65
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        8:09:41
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        30000000
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="px-2 py-1 border border-gray-300 text-left italic font-bold"
+                        colspan="6"
+                      >
+                        self-play/
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="px-2 py-1 border border-gray-300 text-left italic"
+                      >
+                        poca-curriculum
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        124.05
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        1629.55
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        3.75
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        15:16:56
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        50000000
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="px-2 py-1 border border-gray-300 text-left italic"
+                      >
+                        poca-rand
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        250.81
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        1165.31
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        4.12
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        15:35:15
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        50000000
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="px-2 py-1 border border-gray-300 text-left italic font-bold"
+                        colspan="6"
+                      >
+                        self-play-from-model/
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="px-2 py-1 border border-gray-300 text-left italic"
+                      >
+                        poca-curriculum
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        266.36
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        1485.64
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        4.18
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        15:18:21
+                      </td>
+                      <td class="px-2 py-1 border border-gray-300 text-right">
+                        50000000
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-            <div id="agent-vs-humans" class="tab-content p-4 overflow-auto active">
-              <p>The two top performing models were placed against each other in order to select a model for the playable version of the game to be distributed to survey participants. Results of this comparison can be seen below.</p>
+            <div
+              id="agent-vs-humans"
+              class="tab-content p-4 overflow-auto active"
+            >
+              <p>
+                The two top performing models were placed against each other in
+                order to select a model for the playable version of the game to
+                be distributed to survey participants. Results of this
+                comparison can be seen below.
+              </p>
               <table class="min-w-full bg-white border border-gray-300 mt-4">
                 <thead class="bg-gray-200">
                   <tr>
-                    <th class="px-2 py-1 border border-gray-300 text-left">Model ID</th>
-                    <th class="px-2 py-1 border border-gray-300 text-right">Wins</th>
-                    <th class="px-2 py-1 border border-gray-300 text-right">Losses</th>
-                    <th class="px-2 py-1 border border-gray-300 text-right">Draws</th>
-                    <th class="px-2 py-1 border border-gray-300 text-right">Win Rate</th>
+                    <th class="px-2 py-1 border border-gray-300 text-left">
+                      Model ID
+                    </th>
+                    <th class="px-2 py-1 border border-gray-300 text-right">
+                      Wins
+                    </th>
+                    <th class="px-2 py-1 border border-gray-300 text-right">
+                      Losses
+                    </th>
+                    <th class="px-2 py-1 border border-gray-300 text-right">
+                      Draws
+                    </th>
+                    <th class="px-2 py-1 border border-gray-300 text-right">
+                      Win Rate
+                    </th>
                   </tr>
                 </thead>
                 <tbody class="text-nowrap">
                   <tr>
-                    <td class="px-2 py-1 border border-gray-300 text-left italic">self-play/poca-curriculum</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">637</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">279</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right" rowspan="2">108</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">62.21%</td>
+                    <td
+                      class="px-2 py-1 border border-gray-300 text-left italic"
+                    >
+                      self-play/poca-curriculum
+                    </td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">
+                      637
+                    </td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">
+                      279
+                    </td>
+                    <td
+                      class="px-2 py-1 border border-gray-300 text-right"
+                      rowspan="2"
+                    >
+                      108
+                    </td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">
+                      62.21%
+                    </td>
                   </tr>
                   <tr>
-                    <td class="px-2 py-1 border border-gray-300 text-left italic">self-play-from-model/poca-curriculum</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">279</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">637</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right">27.25%</td>
+                    <td
+                      class="px-2 py-1 border border-gray-300 text-left italic"
+                    >
+                      self-play-from-model/poca-curriculum
+                    </td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">
+                      279
+                    </td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">
+                      637
+                    </td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">
+                      27.25%
+                    </td>
                   </tr>
                 </tbody>
               </table>
-              <p class="mt-8">After selecting a model, a playable build of the game was distributed to survey participants, where participants were able to play against the model and export their gameplay results. Gameplay results of the survey can be seen below.</p>
+              <p class="mt-8">
+                After selecting a model, a playable build of the game was
+                distributed to survey participants, where participants were able
+                to play against the model and export their gameplay results.
+                Gameplay results of the survey can be seen below.
+              </p>
               <table class="min-w-full bg-white border border-gray-300 mt-4">
                 <thead class="bg-gray-200">
                   <tr>
-                    <th class="px-2 py-1 border border-gray-300 text-left"> </th>
-                    <th class="px-2 py-1 border border-gray-300 text-right">Wins</th>
-                    <th class="px-2 py-1 border border-gray-300 text-right">Losses</th>
-                    <th class="px-2 py-1 border border-gray-300 text-right">Draws</th>
-                    <th class="px-2 py-1 border border-gray-300 text-right">Win Rate</th>
-                    <th class="px-2 py-1 border border-gray-300 text-right">Avg. Hits</th>
-                    <th class="px-2 py-1 border border-gray-300 text-right">Avg. Shots</th>
-                    <th class="px-2 py-1 border border-gray-300 text-right">Accuracy</th>
+                    <th class="px-2 py-1 border border-gray-300 text-left"></th>
+                    <th class="px-2 py-1 border border-gray-300 text-right">
+                      Wins
+                    </th>
+                    <th class="px-2 py-1 border border-gray-300 text-right">
+                      Losses
+                    </th>
+                    <th class="px-2 py-1 border border-gray-300 text-right">
+                      Draws
+                    </th>
+                    <th class="px-2 py-1 border border-gray-300 text-right">
+                      Win Rate
+                    </th>
+                    <th class="px-2 py-1 border border-gray-300 text-right">
+                      Avg. Hits
+                    </th>
+                    <th class="px-2 py-1 border border-gray-300 text-right">
+                      Avg. Shots
+                    </th>
+                    <th class="px-2 py-1 border border-gray-300 text-right">
+                      Accuracy
+                    </th>
                   </tr>
                 </thead>
                 <tbody class="text-nowrap">
                   <tr>
-                    <td class="px-2 py-1 border border-gray-300 text-left ">Humans</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right ">101</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right ">220</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right " rowspan="2">13</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right ">30.24%</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right ">5.31</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right ">22.17</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right ">23.95%</td>
+                    <td class="px-2 py-1 border border-gray-300 text-left">
+                      Humans
+                    </td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">
+                      101
+                    </td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">
+                      220
+                    </td>
+                    <td
+                      class="px-2 py-1 border border-gray-300 text-right"
+                      rowspan="2"
+                    >
+                      13
+                    </td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">
+                      30.24%
+                    </td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">
+                      5.31
+                    </td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">
+                      22.17
+                    </td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">
+                      23.95%
+                    </td>
                   </tr>
                   <tr>
-                    <td class="px-2 py-1 border border-gray-300 text-left ">Agent</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right ">220</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right ">101</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right ">65.86%</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right ">7.71</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right ">50.60</td>
-                    <td class="px-2 py-1 border border-gray-300 text-right ">15.24%</td>
+                    <td class="px-2 py-1 border border-gray-300 text-left">
+                      Agent
+                    </td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">
+                      220
+                    </td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">
+                      101
+                    </td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">
+                      65.86%
+                    </td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">
+                      7.71
+                    </td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">
+                      50.60
+                    </td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">
+                      15.24%
+                    </td>
                   </tr>
                 </tbody>
               </table>
-              
             </div>
-            <div id="target-training" class="tab-content p-4 overflow-auto hidden">
-              <img src="images/tb_cumulative.png" alt="Target-Based Reward Graph" class="w-full" />
-              <img src="images/tb_len.png" alt="Target-Based Episode Length Graph" class="w-full mt-4" />
+            <div
+              id="target-training"
+              class="tab-content p-4 overflow-auto hidden"
+            >
+              <img
+                src="images/tb_cumulative.png"
+                alt="Target-Based Reward Graph"
+                class="w-full"
+              />
+              <img
+                src="images/tb_len.png"
+                alt="Target-Based Episode Length Graph"
+                class="w-full mt-4"
+              />
             </div>
-            <div id="self-play-training" class="tab-content p-4 overflow-auto hidden">
-              <img src="images/sp_elo.png" alt="Self-Play ELO Graph" class="w-full" />
-              <img src="images/sl_len.png" alt="Self-Play Episode Length Graph" class="w-full mt-4" />
+            <div
+              id="self-play-training"
+              class="tab-content p-4 overflow-auto hidden"
+            >
+              <img
+                src="images/sp_elo.png"
+                alt="Self-Play ELO Graph"
+                class="w-full"
+              />
+              <img
+                src="images/sl_len.png"
+                alt="Self-Play Episode Length Graph"
+                class="w-full mt-4"
+              />
             </div>
           </div>
         </div>
@@ -305,35 +894,60 @@
       <!-- Playable Demo Section -->
       <section id="playable-demo" class="relative text-center my-12">
         <div class="relative w-full h-64">
-          <img src="images/demo_img.png" alt="Demo Banner Image" class="w-full h-64 object-cover">
-          <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20">
+          <img
+            src="images/demo_img.png"
+            alt="Demo Banner Image"
+            class="w-full h-64 object-cover"
+          />
+          <div
+            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20"
+          >
             <p class="text-lg md:text-xl text-white text-shadow">
               Playable demo against the
-              <span class="italic">self-play/poca-curriculum</span> model available here:
-              <img alt="GitHub Downloads (specific asset, latest release)" src="https://img.shields.io/github/downloads/darefjev44/fyp-expo-2024/latest/demo" class="inline-block ml-2">
+              <span class="italic">self-play/poca-curriculum</span> model
+              available here:
+              <img
+                alt="GitHub Downloads (specific asset, latest release)"
+                src="https://img.shields.io/github/downloads/darefjev44/fyp-expo-2024/latest/demo"
+                class="inline-block ml-2"
+              />
             </p>
           </div>
         </div>
       </section>
-      
-     
     </main>
     <footer class="bg-white py-4 border-t border-gray-300">
       <div class="container mx-auto flex justify-between items-center">
         <div class="text-left">
           <p class="text-sm text-gray-600">Daniel Arefjev</p>
-          <p class="text-sm text-gray-600">BSc. (Hons) in Computing with Software Development</p>
-          <p class="text-sm text-gray-600">Munster Technological University, Co. Kerry</p>
+          <p class="text-sm text-gray-600">
+            BSc. (Hons) in Computing with Software Development
+          </p>
+          <p class="text-sm text-gray-600">
+            Munster Technological University, Co. Kerry
+          </p>
         </div>
         <div class="flex space-x-4">
-          <a href="https://github.com/darefjev44" target="_blank" class="text-gray-600 hover:text-gray-800">
+          <a
+            href="https://github.com/darefjev44"
+            target="_blank"
+            class="text-gray-600 hover:text-gray-800"
+          >
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.26.82-.577v-2.165c-3.338.727-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.758-1.333-1.758-1.087-.744.082-.728.082-.728 1.203.084 1.835 1.236 1.835 1.236 1.07 1.834 2.809 1.304 3.495.998.108-.774.418-1.305.762-1.605-2.665-.304-5.467-1.333-5.467-5.932 0-1.31.469-2.382 1.235-3.222-.124-.303-.536-1.524.117-3.176 0 0 1.008-.322 3.3 1.23.96-.267 1.987-.4 3.01-.404 1.022.004 2.05.137 3.01.404 2.29-1.552 3.295-1.23 3.295-1.23.656 1.652.244 2.873.12 3.176.77.84 1.236 1.912 1.236 3.222 0 4.61-2.807 5.624-5.478 5.921.43.372.823 1.102.823 2.222v3.293c0 .32.216.694.824.576C20.565 21.796 24 17.302 24 12c0-6.63-5.37-12-12-12z"/>
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.26.82-.577v-2.165c-3.338.727-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.758-1.333-1.758-1.087-.744.082-.728.082-.728 1.203.084 1.835 1.236 1.835 1.236 1.07 1.834 2.809 1.304 3.495.998.108-.774.418-1.305.762-1.605-2.665-.304-5.467-1.333-5.467-5.932 0-1.31.469-2.382 1.235-3.222-.124-.303-.536-1.524.117-3.176 0 0 1.008-.322 3.3 1.23.96-.267 1.987-.4 3.01-.404 1.022.004 2.05.137 3.01.404 2.29-1.552 3.295-1.23 3.295-1.23.656 1.652.244 2.873.12 3.176.77.84 1.236 1.912 1.236 3.222 0 4.61-2.807 5.624-5.478 5.921.43.372.823 1.102.823 2.222v3.293c0 .32.216.694.824.576C20.565 21.796 24 17.302 24 12c0-6.63-5.37-12-12-12z"
+              />
             </svg>
           </a>
-          <a href="https://www.linkedin.com/in/daniel-arefjev-316a351bb/" target="_blank" class="text-gray-600 hover:text-gray-800">
+          <a
+            href="https://www.linkedin.com/in/daniel-arefjev-316a351bb/"
+            target="_blank"
+            class="text-gray-600 hover:text-gray-800"
+          >
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M22.23 0H1.77C.79 0 0 .774 0 1.73v20.54C0 23.227.79 24 1.77 24h20.46c.98 0 1.77-.774 1.77-1.73V1.73C24 .774 23.21 0 22.23 0zm-14.77 20h-3v-11h3v11zm-1.5-12.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zM20 20h-3v-5.5c0-1.65-1.35-3-3-3s-3 1.35-3 3V20h-3v-11h3v1.57c.85-1.27 2.35-2.07 3.97-2.07 3.45 0 5 2.83 5 5.43V20z"/>
+              <path
+                d="M22.23 0H1.77C.79 0 0 .774 0 1.73v20.54C0 23.227.79 24 1.77 24h20.46c.98 0 1.77-.774 1.77-1.73V1.73C24 .774 23.21 0 22.23 0zm-14.77 20h-3v-11h3v11zm-1.5-12.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zM20 20h-3v-5.5c0-1.65-1.35-3-3-3s-3 1.35-3 3V20h-3v-11h3v1.57c.85-1.27 2.35-2.07 3.97-2.07 3.45 0 5 2.83 5 5.43V20z"
+              />
             </svg>
           </a>
         </div>
@@ -359,6 +973,29 @@
         event.currentTarget.classList.remove("border-transparent");
         event.currentTarget.classList.remove("hover:border-blue-500");
       }
+    </script>
+    <script>
+      function toggleTables(button) {
+        const targetId = button.getAttribute("data-target");
+        const tablesContainer = document.getElementById(targetId);
+        const caretIcon = button.querySelector("i");
+
+        if (tablesContainer.classList.contains("max-h-0")) {
+          tablesContainer.classList.remove("max-h-0");
+          tablesContainer.classList.add("max-h-screen");
+          caretIcon.classList.add("-rotate-180");
+        } else {
+          tablesContainer.classList.remove("max-h-screen");
+          tablesContainer.classList.add("max-h-0");
+          caretIcon.classList.remove("-rotate-180");
+        }
+      }
+
+      document.querySelectorAll(".toggleTablesBtn").forEach((button) => {
+        button.addEventListener("click", function () {
+          toggleTables(this);
+        });
+      });
     </script>
   </body>
 </html>
