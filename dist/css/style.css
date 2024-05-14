@@ -578,6 +578,12 @@ video {
 .mb-8 {
   margin-bottom: 2rem;
 }
+.mt-4 {
+  margin-top: 1rem;
+}
+.mt-8 {
+  margin-top: 2rem;
+}
 .flex {
   display: flex;
 }
@@ -611,11 +617,17 @@ video {
 .w-auto {
   width: auto;
 }
+.w-full {
+  width: 100%;
+}
 .min-w-full {
   min-width: 100%;
 }
 .max-w-none {
   max-width: none;
+}
+.table-auto {
+  table-layout: auto;
 }
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -642,6 +654,12 @@ video {
 }
 .overflow-hidden {
   overflow: hidden;
+}
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+.text-nowrap {
+  text-wrap: nowrap;
 }
 .rounded {
   border-radius: 0.25rem;
