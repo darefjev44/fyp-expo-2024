@@ -21,3 +21,8 @@ html {
   .text-shadow {
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
   }
+
+  .blur-image {
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+  }

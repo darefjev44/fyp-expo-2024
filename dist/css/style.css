@@ -540,6 +540,9 @@ video {
 .relative {
   position: relative;
 }
+.inset-0 {
+  inset: 0px;
+}
 .left-0 {
   left: 0px;
 }
@@ -566,9 +569,6 @@ video {
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
-.mb-0 {
-  margin-bottom: 0px;
-}
 .mb-12 {
   margin-bottom: 3rem;
 }
@@ -578,11 +578,17 @@ video {
 .mb-8 {
   margin-bottom: 2rem;
 }
+.ml-2 {
+  margin-left: 0.5rem;
+}
 .mt-4 {
   margin-top: 1rem;
 }
 .mt-8 {
   margin-top: 2rem;
+}
+.inline-block {
+  display: inline-block;
 }
 .flex {
   display: flex;
@@ -655,9 +661,6 @@ video {
 .overflow-hidden {
   overflow: hidden;
 }
-.whitespace-nowrap {
-  white-space: nowrap;
-}
 .text-nowrap {
   text-wrap: nowrap;
 }
@@ -687,6 +690,10 @@ video {
 .border-transparent {
   border-color: transparent;
 }
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
@@ -701,6 +708,13 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.bg-opacity-20 {
+  --tw-bg-opacity: 0.2;
+}
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .p-4 {
   padding: 1rem;
@@ -809,29 +823,41 @@ html {
   .text-shadow {
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
   }
+
+  .blur-image {
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+  }
+
   .hover\:border-blue-500:hover {
   --tw-border-opacity: 1;
   border-color: rgb(59 130 246 / var(--tw-border-opacity));
 }
+
   .hover\:border-transparent:hover {
   border-color: transparent;
 }
+
   .hover\:bg-blue-600:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }
+
   .hover\:text-gray-800:hover {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
 }
+
   .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+
   .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
+
   @media (min-width: 768px) {
 
   .md\:text-6xl {
@@ -844,6 +870,7 @@ html {
     line-height: 1.75rem;
   }
 }
+
   @media (min-width: 1024px) {
 
   .lg\:grid-cols-2 {
