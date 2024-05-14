@@ -13,6 +13,7 @@ html {
     display: block;
 }
 
+
 .blur-video {
     filter: blur(8px);
     -webkit-filter: blur(8px);

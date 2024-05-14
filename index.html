@@ -83,6 +83,9 @@
           <div>
             <div class="mb-4">
               <div class="flex border-b border-gray-300">
+                <button class="tab-button px-4 py-2 text-lg font-medium text-gray-700 border-b-2 border-transparent hover:border-blue-500 focus:outline-none" onclick="openTab(event, 'model-comparison')">
+                  Model Comparison
+                </button>
                 <button class="tab-button px-4 py-2 text-lg font-medium text-gray-700 border-b-2 border-transparent hover:border-blue-500 focus:outline-none" onclick="openTab(event, 'agent-vs-humans')">
                   Agent vs. Humans
                 </button>
@@ -94,13 +97,110 @@
                 </button>
               </div>
             </div>
-            <div id="agent-vs-humans" class="tab-content active bg-gray-200 h-64 flex items-center justify-center">
+            <div id="model-comparison" class="tab-content bg-gray-200 p-4 overflow-auto active">
+              <table class="min-w-full bg-white border border-gray-300">
+                <thead class="bg-gray-200">
+                  <tr>
+                    <th class="px-2 py-1 border border-gray-300 text-left">Run ID</th>
+                    <th class="px-2 py-1 border border-gray-300 text-right">First Success Step</th>
+                    <th class="px-2 py-1 border border-gray-300 text-right">First Success Episode Length</th>
+                    <th class="px-2 py-1 border border-gray-300 text-right">First Success ELO</th>
+                    <th class="px-2 py-1 border border-gray-300 text-right">Final Step</th>
+                    <th class="px-2 py-1 border border-gray-300 text-right">Final Episode Length</th>
+                    <th class="px-2 py-1 border border-gray-300 text-right">Final ELO</th>
+                    <th class="px-2 py-1 border border-gray-300 text-right">Final Cumulative Reward</th>
+                    <th class="px-2 py-1 border border-gray-300 text-left">Time Elapsed</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="px-2 py-1 border border-gray-300 text-left">results/sprint7/self-play/poca-curriculum/FPSA...</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">12900000</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">284.449554</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">1510.464600</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">50000000</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">124.045456</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">1629.551880</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">3.754340</td>
+                    <td class="px-2 py-1 border border-gray-300 text-left">15:16:56.908534</td>
+                  </tr>
+                  <tr>
+                    <td class="px-2 py-1 border border-gray-300 text-left">results/sprint7/self-play/poca-rand/FPSAgent</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">6350000</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">320.740509</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">1261.160889</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">50000000</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">250.810974</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">1165.310669</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">4.116340</td>
+                    <td class="px-2 py-1 border border-gray-300 text-left">15:35:15.958209</td>
+                  </tr>
+                  <tr>
+                    <td class="px-2 py-1 border border-gray-300 text-left">results/sprint7/self-play-from-model/poca-curr...</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">12550000</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">227.617645</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">1290.738403</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">50000000</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">266.356750</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">1485.641846</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">4.175404</td>
+                    <td class="px-2 py-1 border border-gray-300 text-left">15:18:21.859020</td>
+                  </tr>
+                  <tr>
+                    <td class="px-2 py-1 border border-gray-300 text-left">results/sprint7/target-based/curriculum/FPSAgent</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">7950000</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">712.933350</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">NaN</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">30000000</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">501.580261</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">NaN</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">4.511446</td>
+                    <td class="px-2 py-1 border border-gray-300 text-left">6:09:25.350080</td>
+                  </tr>
+                  <tr>
+                    <td class="px-2 py-1 border border-gray-300 text-left">results/sprint7/target-based/curriculum-curios...</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">11450000</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">660.849976</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">NaN</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">30000000</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">394.573181</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">NaN</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">4.022696</td>
+                    <td class="px-2 py-1 border border-gray-300 text-left">8:07:10.454657</td>
+                  </tr>
+                  <tr>
+                    <td class="px-2 py-1 border border-gray-300 text-left">results/sprint7/target-based/rand/FPSAgent</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">5300000</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">875.599976</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">NaN</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">30000000</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">558.500000</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">NaN</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">4.639664</td>
+                    <td class="px-2 py-1 border border-gray-300 text-left">6:10:47.911955</td>
+                  </tr>
+                  <tr>
+                    <td class="px-2 py-1 border border-gray-300 text-left">results/sprint7/target-based/rand-curiosity/FP...</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">2800000</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">999.000000</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">NaN</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">30000000</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">680.047607</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">NaN</td>
+                    <td class="px-2 py-1 border border-gray-300 text-right">4.652017</td>
+                    <td class="px-2 py-1 border border-gray-300 text-left">8:09:41.126733</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+            </div>
+            <div id="agent-vs-humans" class="tab-content bg-gray-200 p-4 overflow-auto hidden">
               <span class="text-gray-700">[Agent vs. Humans Results Table]</span>
             </div>
-            <div id="target-training" class="tab-content bg-gray-200 h-64 flex items-center justify-center hidden">
+            <div id="target-training" class="tab-content bg-gray-200 p-4 overflow-auto hidden">
               <span class="text-gray-700">[Target Training Results Table]</span>
             </div>
-            <div id="self-play-training" class="tab-content bg-gray-200 h-64 flex items-center justify-center hidden">
+            <div id="self-play-training" class="tab-content bg-gray-200 p-4 overflow-auto hidden">
               <span class="text-gray-700">[Self-Play Training Results Table]</span>
             </div>
           </div>
