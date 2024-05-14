@@ -12,17 +12,15 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'  # Specify the Node.js version you need
+        
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4.0.2
 
       - name: Install dependencies
         run: npm install
 
       - name: Build Tailwind CSS
-        run: npm run build:css  # Ensure this script exists in your package.json
+        run: npm run build:css 
 
       - name: Deploy GitHub Pages site
         uses: actions/deploy-pages@v4.0.5
