@@ -12,3 +12,11 @@ html {
 .tab-content.active {
     display: block;
 }
+
+.blur-video {
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+  }
+  .text-shadow {
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  }
