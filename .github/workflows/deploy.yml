@@ -26,6 +26,12 @@ jobs:
       - name: Build Tailwind CSS
         run: npm run build:css 
 
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: github-pages
+          path: ./out
+                
       - name: Deploy GitHub Pages site
         uses: actions/deploy-pages@v4.0.5
         with:
