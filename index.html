@@ -4,53 +4,223 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="dist/css/style.css">
-    </head>
-    <body class="m-0 bg-white">
-        <header class="relative flex items-center justify-center h-screen mb-12 overflow-hidden">
-            <div class="absolute top-0 left-0 right-0 flex items-center justify-center h-full z-20">
-                <div class="text-center text-white p-4" style="background: rgba(0, 0, 0, 0.5);">
-                    <h1 class="text-4xl font-bold">Machine Learning in FPS Games</h1>
-                    <p class="mt-2 text-xl">Software Development Final Year Project 2024</p>
-                </div>
-            </div>
-            <video autoplay loop muted class="absolute z-10 w-auto min-w-full min-h-full max-w-none">
-              <source src="video.mp4" type="video/mp4" />Your browser does not support the video tag.
-            </video>
-          </header>
-          <div class="max-w-lg m-auto">
-            <p class="mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat a
-              magna non varius. Proin leo felis, euismod non porta eget, varius sit amet
-              sapien. Maecenas in nulla at leo convallis consectetur id a sapien. Nulla
-              nec pulvinar nisi. Vivamus non facilisis lacus, et volutpat libero. Nulla ac
-              odio aliquam, accumsan arcu ut, lacinia est. Nulla eu sem elit. Fusce nec
-              laoreet sem, semper molestie libero.
-            </p>
-            <p class="mb-4">
-              Ut sagittis lacus consequat accumsan venenatis. Sed sollicitudin, lectus et
-              fringilla ultrices, dolor nisi scelerisque tortor, vel finibus magna massa
-              non nunc. Phasellus massa quam, egestas a nisl sed, porta volutpat metus.
-              Nunc sed elit ac tellus tempor cursus. Suspendisse potenti. Vestibulum
-              varius rutrum nisl nec consequat. Suspendisse semper dignissim sem viverra
-              semper. Nulla porttitor, purus nec accumsan pharetra, nisi dolor condimentum
-              ipsum, id consequat nulla nunc in ligula.
-            </p>
-            <p class="mb-12">
-              Nulla pharetra lacinia nisi, vitae mollis tellus euismod id. Mauris porta
-              dignissim hendrerit. Cras id velit varius, fermentum lectus vitae, ultricies
-              dolor. In bibendum rhoncus purus vel rutrum. Nam vulputate imperdiet
-              fringilla. Donec blandit libero massa. Suspendisse dictum diam mauris, vitae
-              fermentum dolor tincidunt in. Pellentesque sollicitudin venenatis dolor,
-              vitae scelerisque elit ultrices eu. Donec eget sodales risus, quis dignissim
-              neque.
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="dist/css/style.css" />
+  </head>
+  <body class="m-0 bg-white">
+    <header
+      class="relative flex items-center justify-center h-screen mb-12 overflow-hidden"
+    >
+      <!-- Call to Action -->
+      <div
+        class="absolute top-0 left-0 right-0 flex items-center justify-center h-full z-20"
+      >
+        <div
+          class="text-center text-white p-4"
+          style="background: rgba(0, 0, 0, 0.5)"
+        >
+          <h1 class="text-3xl md:text-5xl font-bold mb-4">
+            Machine Learning in First Person Shooter (FPS) Games
+          </h1>
+          <p class="text-lg md:text-xl mb-8">
+            Explore how machine learning can revolutionize the AI in FPS games,
+            providing more immersive and challenging experiences.
+          </p>
+          <a
+            href="#page-content"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Explore Project
+          </a>
+        </div>
+      </div>
+
+      <!-- Background Video -->
+      <video
+        autoplay
+        loop
+        muted
+        class="absolute z-10 w-auto min-w-full min-h-full max-w-none"
+      >
+        <source src="video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </header>
+    <main id="page-content" class="container mx-auto py-8 px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Introduction Section -->
+        <section id="introduction" class="mb-12">
+          <h2 class="text-2xl font-semibold mb-4">Introduction</h2>
+          <p class="text-lg">
+            Machine Learning research in First-Person Shooter (FPS) games has
+            primarily been limited to platforms like VizDoom and DeepMind Lab,
+            which are based on outdated game engines. This project explores the
+            use of Unity ML-Agents to develop machine learning agents within a
+            custom-designed FPS game environment, offering a modern alternative
+            to traditional artificial intelligence techniques used in games.
+          </p>
+        </section>
+
+        <!-- Methodology Section -->
+        <section id="methodology" class="mb-12">
+          <h2 class="text-2xl font-semibold mb-4">Methodology</h2>
+          <div class="mb-8">
+            <p class="text-lg">
+              A custom FPS game environment was developed using the Unity game
+              engine, providing a dynamic setting for training and testing AI
+              agents through Unity ML-Agents. The AI agents were trained using a
+              curriculum learning approach to gradually increase the complexity
+              of the training environment, as well as self-play to allow
+              the agents to learn from their own past experiences.
             </p>
           </div>
-        </body>
+        </section>
+      </div>
+
+      <!-- Results Section -->
+      <section id="results" class="mb-12">
+        <h2 class="text-2xl font-semibold mb-4">Results</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div>
+            <p class="text-lg">
+              Among the seven trained agents, four were target-based and three
+              used self-play, including one initiated from the
+              highest-performing target-based model. One agent was selected for
+              integration into a playable version of the game. This agent was
+              tested across 324 rounds against human players of varying skill
+              levels.
+            </p>
+            <p class="text-lg">
+              The AI agent, while only having access to data simulating the
+              information available to human players, was able to successfully
+              navigate a randomized environment and compete effectively against
+              skilled human players, achieving a 65.86% win rate.
+            </p>
+          </div>
+          <div>
+            <div class="mb-4">
+              <div class="flex border-b">
+                <button
+                  class="tab-button px-4 py-2 text-lg font-medium text-gray-700 border-b-2 border-transparent focus:outline-none"
+                  onclick="openTab(event, 'agent-vs-humans')"
+                >
+                  Agent vs. Humans
+                </button>
+                <button
+                  class="tab-button px-4 py-2 text-lg font-medium text-gray-700 border-b-2 border-transparent focus:outline-none"
+                  onclick="openTab(event, 'target-training')"
+                >
+                  Target Training
+                </button>
+                <button
+                  class="tab-button px-4 py-2 text-lg font-medium text-gray-700 border-b-2 border-transparent focus:outline-none"
+                  onclick="openTab(event, 'self-play-training')"
+                >
+                  Self-Play Training
+                </button>
+              </div>
+            </div>
+            <div
+              id="agent-vs-humans"
+              class="tab-content active bg-gray-300 h-64 flex items-center justify-center"
+            >
+              <span class="text-gray-700"
+                >[Agent vs. Humans Results Table]</span
+              >
+            </div>
+            <div
+              id="target-training"
+              class="tab-content bg-gray-300 h-64 flex items-center justify-center"
+            >
+              <span class="text-gray-700">[Target Training Results Table]</span>
+            </div>
+            <div
+              id="self-play-training"
+              class="tab-content bg-gray-300 h-64 flex items-center justify-center"
+            >
+              <span class="text-gray-700"
+                >[Self-Play Training Results Table]</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Conclusion Section -->
+      <section id="conclusion" class="mb-12">
+        <h2 class="text-2xl font-semibold mb-4">Conclusion</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div>
+            <p class="text-lg">
+              This project highlights the viability of machine learning as an
+              alternative to traditional AI techniques in first-person shooter
+              games. 
+              By levereaging Unity ML-Agents, the developed AI agent was able to perform exceptionally well against skilled human players, achieving a 65.86% win rate. 
+              This suggests that machine learning can be used to create agents capable of matching or even exceeding the performance of AI created with traditional techniques, potentially requiring less work to develop due to not being reliant on implementations such as navigation meshes.
+
+            </p>
+          </div>
+          <div class="bg-gray-300 h-64 flex items-center justify-center">
+            <span class="text-gray-700">[Video Placeholder]</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Playable Demo Section -->
+      <section id="playable-demo" class="text-center mb-12">
+        <div class="flex items-center justify-center space-x-4">
+          <p class="text-lg mb-0">
+            Playable demo against the
+            <span class="italic">self-play/poca-curriculum</span> model
+            available here:
+          </p>
+          <img
+            alt="GitHub Downloads (specific asset, latest release)"
+            src="https://img.shields.io/github/downloads/darefjev44/fyp-expo-2024/latest/demo"
+          />
+        </div>
+      </section>
+    </main>
+    <footer class="bg-white py-4 border-t">
+      <div class="container mx-auto flex justify-between items-center">
+          <div class="text-left">
+              <p class="text-sm">Daniel Arefjev</p>
+              <p class="text-sm">BSc. (Hons) in Computing with Software Development</p>
+              <p class="text-sm">Munster Technological University, Co. Kerry</p>
+          </div>
+          <div class="flex space-x-4">
+              <a href="https://github.com/" target="_blank" class="text-gray-600 hover:text-gray-800">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.26.82-.577v-2.165c-3.338.727-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.758-1.333-1.758-1.087-.744.082-.728.082-.728 1.203.084 1.835 1.236 1.835 1.236 1.07 1.834 2.809 1.304 3.495.998.108-.774.418-1.305.762-1.605-2.665-.304-5.467-1.333-5.467-5.932 0-1.31.469-2.382 1.235-3.222-.124-.303-.536-1.524.117-3.176 0 0 1.008-.322 3.3 1.23.96-.267 1.987-.4 3.01-.404 1.022.004 2.05.137 3.01.404 2.29-1.552 3.295-1.23 3.295-1.23.656 1.652.244 2.873.12 3.176.77.84 1.236 1.912 1.236 3.222 0 4.61-2.807 5.624-5.478 5.921.43.372.823 1.102.823 2.222v3.293c0 .32.216.694.824.576C20.565 21.796 24 17.302 24 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+              </a>
+              <a href="https://www.linkedin.com/" target="_blank" class="text-gray-600 hover:text-gray-800">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M22.23 0H1.77C.79 0 0 .774 0 1.73v20.54C0 23.227.79 24 1.77 24h20.46c.98 0 1.77-.774 1.77-1.73V1.73C24 .774 23.21 0 22.23 0zm-14.77 20h-3v-11h3v11zm-1.5-12.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zM20 20h-3v-5.5c0-1.65-1.35-3-3-3s-3 1.35-3 3V20h-3v-11h3v1.57c.85-1.27 2.35-2.07 3.97-2.07 3.45 0 5 2.83 5 5.43V20z"/>
+                  </svg>
+              </a>
+          </div>
+      </div>
+  </footer>
+    <script>
+      function openTab(event, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].classList.remove("active");
+        }
+        tablinks = document.getElementsByClassName("tab-button");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].classList.remove("border-blue-500");
+        }
+        document.getElementById(tabName).classList.add("active");
+        event.currentTarget.classList.add("border-blue-500");
+      }
+    </script>
+  </body>
 </html>
