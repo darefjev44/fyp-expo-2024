@@ -30,7 +30,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
-          path: ./out
+          path: .
                 
       - name: Deploy GitHub Pages site
         uses: actions/deploy-pages@v4.0.5
