@@ -750,8 +750,10 @@
               <p class="mt-8">
                 After selecting a model, a playable build of the game was
                 distributed to survey participants, where participants were able
-                to play against the <span class="italic">self-play/poca-curriculum</span> model and export their gameplay results.
-                Gameplay results of the survey can be seen below.
+                to play against the
+                <span class="italic">self-play/poca-curriculum</span> model and
+                export their gameplay results. Gameplay results of the survey
+                can be seen below.
               </p>
               <table class="min-w-full bg-white border border-gray-300 mt-4">
                 <thead class="bg-gray-200">
@@ -886,8 +888,51 @@
               reliant on implementations such as navigation meshes.
             </p>
           </div>
-          <div class="bg-gray-200 h-64 flex items-center justify-center">
-            <span class="text-gray-700">[Video Placeholder]</span>
+          <div>
+            <div class="mb-4">
+              <div class="flex flex-wrap border-b border-gray-300">
+                <button
+                  class="video-tab-button flex-1 px-2 py-1 md:px-4 md:py-2 text-sm md:text-lg font-medium text-gray-700 border-b-2 focus:outline-none border-blue-600"
+                  onclick="openVideoTab(event, 'video1')"
+                >
+                  Model without Smoothing
+                </button>
+                <button
+                  class="video-tab-button flex-1 px-2 py-1 md:px-4 md:py-2 text-sm md:text-lg font-medium text-gray-700 border-b-2 border-transparent hover:border-blue-500 focus:outline-none"
+                  onclick="openVideoTab(event, 'video2')"
+                >
+                  Model with Smoothing
+                </button>
+              </div>
+            </div>
+            <div id="video1" class="video-tab-content p-4 active">
+              <div class="bg-gray-200 flex items-center justify-center">
+                <iframe
+                  id="iframe1"
+                  class="w-full h-64 md:w-full md:h-96 lg:w-full lg:h-96"
+                  src="https://www.youtube.com/embed/AtH-JdJAz3c?si=062YpDe83JtE4km5"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+            <div id="video2" class="video-tab-content p-4 hidden">
+              <div class="bg-gray-200 flex items-center justify-center">
+                <iframe
+                  id="iframe2"
+                  class="w-full h-64 md:w-full md:h-96 lg:w-full lg:h-96"
+                  src="https://www.youtube.com/embed/agp6VNQFyYQ?si=MNl6Tr_YqgfQdgdy"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -996,6 +1041,35 @@
           toggleTables(this);
         });
       });
+    </script>
+    <script>
+      function openVideoTab(event, tabName) {
+        var i, tabcontent, tablinks;
+        var iframes = document.querySelectorAll("iframe");
+
+        //pause videos
+        iframes.forEach((iframe) => {
+          var src = iframe.src;
+          iframe.src = src;
+        });
+
+        tabcontent = document.getElementsByClassName("video-tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].classList.remove("active");
+          tabcontent[i].classList.add("hidden");
+        }
+        tablinks = document.getElementsByClassName("video-tab-button");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].classList.remove("border-blue-600");
+          tablinks[i].classList.add("border-transparent");
+          tablinks[i].classList.add("hover:border-blue-500");
+        }
+        document.getElementById(tabName).classList.add("active");
+        document.getElementById(tabName).classList.remove("hidden");
+        event.currentTarget.classList.add("border-blue-600");
+        event.currentTarget.classList.remove("border-transparent");
+        event.currentTarget.classList.remove("hover:border-blue-500");
+      }
     </script>
   </body>
 </html>
