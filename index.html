@@ -951,7 +951,9 @@
               Playable demo against the
               <span class="italic">self-play/poca-curriculum</span> model
               available here:
-              <a href="https://github.com/darefjev44/fyp-expo-2024/releases/tag/demo">
+              <a
+                href="https://github.com/darefjev44/fyp-expo-2024/releases/tag/demo"
+              >
                 <img
                   class="inline-block ml-2"
                   alt="GitHub Release"
@@ -1046,9 +1048,10 @@
     <script>
       function openVideoTab(event, tabName) {
         var i, tabcontent, tablinks;
-        var iframes = document.querySelectorAll("iframe");
+        var iframes = document.querySelectorAll(
+          ".video-tab-content.active iframe"
+        );
 
-        //pause videos
         iframes.forEach((iframe) => {
           var src = iframe.src;
           iframe.src = src;
